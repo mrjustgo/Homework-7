@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./script1.js"></script>
+    <title>Homework3</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section class="tittle">
+      <div class="top center">
+        <h1 class="text">Добро пожаловать на мой сайт !</h1>
+        <p class="top__text">
+          Вам предстоит пройти несколько увлекательных игр. Если готов нажимай
+          <span class="menu__text">поехали</span> и
+          <span class="menu__text">приступай</span>
+        </p>
+          <button class="button__top">Поехали!</button>
+      </div>
+    </section>
+    <section class="menu center">
+      <div class="for-box">
+        <p class="game__box">Игра 1</p>
+      </div>
+      <div class="for-box2">
+        <p class="game__box">Игра 2</p>
+      </div>
+      <div class="for-box3">
+        <p class="game__box">Игра 3</p>
+      </div>
+    </section>
+    <section class="footer center">
+      <div class="footer_top">
+        <h1 class="footer_year">
+          Времена года
+        </h1>
+        <p class="footer_text">Нажмите кнопку играть, введите номер месяца (от 1 до 12) и вы узнаете к какому времени года он относится
+        </p>
+        <button onclick="showTextButton();" class="footer_button">Играть!</button>
+    </div>
+    <img src="img/footer_logo.png" alt="logo" class="footer_img">
+    </section>
+    <section class="footer1 center">
+      <div class="footer_top">
+        <h1 class="footer_year">
+          Запомни слова 
+        </h1>
+        <p class="footer_text">При нажатии на кнопку играть, вы увидите несколько слов, которые вам необходимо запомнить.
+        </p>
+        <button onclick="shuffleArray(array);" class="footer_button">Играть</button>
+    </div>
+    <img src="img/footer_logo1.png" alt="logo" class="footer_img1">
+    </section>
+  </body>
+</html>
