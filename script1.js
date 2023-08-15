@@ -31,26 +31,23 @@ function showTextButton(){
     }
 }
 
-function shuffleArray(array) {
-    for (let i = array.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [array[i], array[j]] = [array[j], array[i]];
-    }
-  }
-  
-  const fruits = ['Яблоко', 'Груша', 'Дыня', 'Виноград', 'Персик', 'Апельсин', 'Мандарин'];
-  shuffleArray(fruits);
-  
-  const firstElementGuess = prompt("Чему равнялся первый элемент массива?");
-  const lastElementGuess = prompt("Чему равнялся последний элемент массива?");
-  
-  const firstElement = fruits[0];
-  const lastElement = fruits[fruits.length - 1];
-  
-  if (firstElementGuess === firstElement && lastElementGuess === lastElement) {
-    alert("Поздравляем, вы угадали оба элемента!");
-  } else if (firstElementGuess === firstElement || lastElementGuess === lastElement) {
-    alert("Вы были близки к победе!");
-  } else {
-    alert("Вы ответили неверно.");
-  }
+let words = ['Яблоко', 'Груша', 'Дыня', 'Виноград', 'Персик', 'Апельсин', 'Мандарин'];
+
+// Перемешиваем элементы массива
+let shuffledWords = words.sort(function() {return Math.random() - 0.5});
+
+// Выводим перемешанные элементы массива на экран
+alert(shuffledWords);
+
+// Запрашиваем у пользователя первый и последний элементы массива
+let firstWordGuess = prompt("Чему равнялся первый элемент массива?");
+let lastWordGuess = prompt("Чему равнялся последний элемент массива?");
+
+// Проверяем угадал ли пользователь элементы
+if (firstWordGuess == shuffledWords[0] && lastWordGuess == shuffledWords[shuffledWords.length - 1]) {
+  alert("Поздравляю, вы угадали оба элемента!");
+} else if (firstWordGuess == shuffledWords[0] || lastWordGuess == shuffledWords[shuffledWords.length - 1]) {
+  alert("Вы были близки к победе!");
+} else {
+  alert("Вы ответили неверно");
+}
