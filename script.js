@@ -23,11 +23,11 @@ console.log(roundedDown); // выводит 32
 console.log(roundedUp); // выводит 33
 console.log(rounded); // выводит 33
 //Задание 4
-let numbers1 = [52, 53, 49, 77, 21, 32];
-let min = Math.min(numbers1);
-let max = Math.max(numbers1);
-console.log("Наименьшее число:", min);
-console.log("Наибольшее число:", max);
+const numbers = 52,53, 49, 77, 21, 32;
+const smallestNumber = Math.min(...numbers);
+const largestNumber = Math.max(...numbers);
+console.log("Наименьшее число: " + smallestNumber);
+console.log("Наибольшее число: " + largestNumber);
 //Задание 5 
 function getRandomNumber() {
     let randomNumber = Math.floor(Math.random() * 10) + 1;
@@ -54,15 +54,12 @@ function getRandomNumber() {
     let currentDate = new Date(); // создаем переменную и сохраняем в нее текущую дату
     currentDate.setDate(currentDate.getDate() + 73); // находим дату, которая будет через 73 дня
     console.log(currentDate); // выводим дату, которая наступит через 73 дня после текущей.
-    //Задание 10 надеюсь это правильно
+    //Задание 10 Переделал немного
     function formatDate(date) {
-        const options = {
-          year: "numeric",
-          month: "long",
-          day: "numeric",
-          weekday: "long",
-        };
-        const formattedDate = date.toLocaleDateString("ru-RU", options);
-        const formattedTime = date.toLocaleTimeString();
-      
-      return date: ${formattedDate} - это ${formattedDate.split(',')[0]}\nВремя: ${formattedTime}; }
+      const options = { day: 'numeric', month: 'long', year: 'numeric', weekday: 'long' };
+      const formattedDate = date.toLocaleDateString('ru-RU', options);
+      const time = date.toLocaleTimeString('ru-RU');
+      return Дата: ${formattedDate} - это ${date.toLocaleDateString("ru-RU", { weekday: "long" })}\nВремя: ${time};
+    }
+    const currentDate = new Date();
+    console.log(formatDate(currentDate));
